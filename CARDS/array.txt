@@ -1,0 +1,22 @@
+package main
+
+import "fmt"
+
+func main() {
+	cards := []string{"Ace Diamond", newCard()}
+	cards = append(cards, "Six of speeads")
+	fmt.Println(len(cards))
+
+	for i := 0; i < len(cards); i++ {
+			fmt.Println(i+1,cards[i])
+	}
+}
+
+
+func newCard() string{
+	return "Five of diamond"
+}
+
+go has two strunctures for handling list which are array and slice
+an array could be as a primitive data structure  holding a list of records 
+while slice has more feature for list operation
