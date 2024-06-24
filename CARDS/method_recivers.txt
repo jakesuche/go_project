@@ -1,0 +1,28 @@
+package main
+
+import "fmt"
+
+type deck []string
+
+func main() {
+	cards := deck{"Ace Diamond", newCard()}
+	cards = append(cards, "Six of speeads")
+	fmt.Println(len(cards))
+	cards.print()
+}
+
+
+func newCard() string{
+	return "Five of diamond"
+}
+
+
+func (d deck) print(){
+	for i, card := range d {
+		fmt.Println(i, card)
+	}
+}
+
+
+
+
